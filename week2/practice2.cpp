@@ -16,7 +16,7 @@ int main()
 		cin >> value; // program sets number from user input to value
 
 		for (i = 2; i < value; i++) {
-			if (value % i == 0) // if user input equals zero after mod  then its not a prime number
+			if (value % i == 0) // if user input equals zero after mod then its not a prime number
 			{
 				cout << value << " is Not prime number" << "\n" << endl;
 				return 0;

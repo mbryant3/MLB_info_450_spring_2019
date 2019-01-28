@@ -2,7 +2,6 @@
 calculates the square of that value and outputs the results to the console. 
 When the user enters '0', execution should stop.
 */
-
 #include "pch.h"
 #include <iostream>
 using namespace std;
