@@ -11,7 +11,7 @@ int main()
 {
 	int year;
 	cout << "Welcome to the Leap year finder! follow the the next line of instructions " << endl;
-	cout << "please enter in a year" << "\n" << endl; // user enters in value 
+	cout << "please enter in a year" << "\n" << endl; // user enters in value .
 	cin >> year;
 	// Leap year conditions
 	if (year % 4 == 0)//Condition 1 -determines if the year is divisible by 4
