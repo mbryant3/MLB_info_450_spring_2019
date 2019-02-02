@@ -6,13 +6,23 @@
 
 using namespace std;
 int main() {
+	
 	char t_d_array[5][7] = {
-	 {' ','/','\\','_','/','\\',' '},
-	 {'/','','D','','D','','\\'},
+	 {'_','/','\\','_','/','\\',' _'},
+	 {'/','_','D','','D','','\\'},
 	 {'(','=','=','O','=','=',')'},
 	 {'\\',' ',' ','~',' ',' ','/'},
 	 {' ','-','-','-','-','-',' '},
-	};
+	}int r;
+	int c;
+	for (int r = 0; r < 5; i++)
+	{
+		for (int c = 0; c< 7; i++))
+		{
+		cout << temp[r][c];
+}
+	}
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
