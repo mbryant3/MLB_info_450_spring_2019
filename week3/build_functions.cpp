@@ -3,6 +3,8 @@
 
 #include "pch.h"
 #include <iostream>
+#include <string.h>
+#include <ctype.h>
 
 using namespace std;
 char  get_user_input();
@@ -25,14 +27,16 @@ int main() {
 }
 char  get_user_input() {
 	//Implement this function
-	char input;
 	cout << "please enter in a letter grade" << endl;
-	cin >> input ;
-	return input;
+	cin >> user_input_letter ;
+	return 0;
 }
 void to_upper_case(char &letter) {
 	//Implement this function
-		user_input input = input - 32;
+	get_user_input.user_input_letter = char &letter;
+	input = toupper(user_input_letter);
+	while (user_input_letter != 'G')
+		return;
 	
 		
 }
