@@ -29,14 +29,16 @@ char  get_user_input() {
 	//Implement this function
 	cout << "please enter in a letter grade" << endl;
 	cin >> user_input_letter ;
-	return 0;
+	to_upper_case(char&letter);
+	cout << user_input_letter << endl;
+	return ;
 }
 void to_upper_case(char &letter) {
 	//Implement this function
-	get_user_input.user_input_letter = char &letter;
-	input = toupper(user_input_letter);
-	while (user_input_letter != 'G')
-		return;
+	int i;
+	for (int i = 0; i < user_input_letter.length(); i++) {
+		user_input_letter[i] = toupper(user_input_letter(i));
+	}
 	
 		
 }
