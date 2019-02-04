@@ -8,21 +8,20 @@ using namespace std;
 int main() {
 	
 	char t_d_array[5][7] = {
-	 {'_','/','\\','_','/','\\',' _'},
-	 {'/','_','D','','D','','\\'},
+	 {'','/','\\','_','/','\\',' '},
+	 {'/','','D','','D','','\\'},
 	 {'(','=','=','O','=','=',')'},
 	 {'\\',' ',' ','~',' ',' ','/'},
 	 {' ','-','-','-','-','-',' '},
-	}int r;
-	int c;
-	for (int r = 0; r < 5; i++)
+	}
+	for (int i = 0; i < 5; i++)
 	{
-		for (int c = 0; c< 7; i++))
+		for (int j= 0; j< 7; i++))
 		{
-		cout << temp[r][c];
+		cout << t_d_array[i][j]<< " ";
 }
 	}
-	return 0;
+	cout << endl;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
