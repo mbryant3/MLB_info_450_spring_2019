@@ -1,10 +1,10 @@
-//build_functions.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// buildfunction.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include "pch.h"
 #include <iostream>
 #include <string.h>
-#include <ctype.h>
+#include <locale>
 
 using namespace std;
 char  get_user_input();
@@ -27,20 +27,14 @@ int main() {
 }
 char  get_user_input() {
 	//Implement this function
-	cout << "please enter in a letter grade" << endl;
-	cin >> user_input_letter ;
-	to_upper_case(char&letter);
-	cout << user_input_letter << endl;
-	return ;
+	char get_user_input;
+	cin >> get_user_input;
+	return get_user_input;
 }
-void to_upper_case(char &letter) {
+void to_upper_case(char &user_input_letter) {
 	//Implement this function
-	int i;
-	for (int i = 0; i < user_input_letter.length(); i++) {
-		user_input_letter[i] = toupper(user_input_letter(i));
+	user_input_letter = toupper(user_input_letter);
+	cout << user_input_letter << endl;
 	}
-	
-		
-}
 
 
