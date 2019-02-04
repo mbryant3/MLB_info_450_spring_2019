@@ -27,14 +27,14 @@ int main() {
 }
 char  get_user_input() {
 	//Implement this function
-	char get_user_input;
-	cin >> get_user_input;
-	return get_user_input;
+	char letter;
+	cin >> letter;
+	return letter;
 }
-void to_upper_case(char &user_input_letter) {
+void to_upper_case(char &letter) {
 	//Implement this function
-	user_input_letter = toupper(user_input_letter);
-	cout << user_input_letter << endl;
+	letter = toupper(letter);
+	cout << letter << endl;
 	}
 
 
