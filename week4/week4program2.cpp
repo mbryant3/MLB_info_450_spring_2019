@@ -25,7 +25,7 @@ int main()
 			getline(cin, name);
 			if (name.empty())
 			{
-				ClassList[5][6] = '\0';
+				//ClassList[5][6] = '\0';
 				cout << ClassList[f][l];
 		
 			else {
