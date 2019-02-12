@@ -14,7 +14,7 @@ int main()
 {
 	int f = 0;
 	int l = 0;
-	string name;
+	string name ="";
 	cout << "Welcome the class list 2-d array. you will be asked the enter 30 names" << endl;
 	string ClassList[5][6];
 	for (int f = 0; f < 5; f++)
@@ -25,27 +25,9 @@ int main()
 			getline(cin, name);
 			if (name.empty())
 			{
-				ClassList[f][l] = '\0';
-				int i;
-				int j;
-				for (int i = 0; i < 5; i++)
-				{
-					for (int j = 0; j < 6; j++)
-					{                                            // checks if string is empty
-						if (!ClassList[i][j].empty())
-						{
-							cout << ClassList[f][l];
-							cout << "\n";
-						}
-						else
-						{
-							exit(0);
-						}
-						exit(0);
-					}
-			
-				}
-			}
+				ClassList[5][6] = '\0';
+				cout << ClassList[f][l];
+		
 			else {
 				ClassList[f][l] = name;
 			}
