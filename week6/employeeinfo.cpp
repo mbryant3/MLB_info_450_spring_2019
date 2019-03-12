@@ -39,12 +39,12 @@ public:
 	void set_is_hourlyorannual(bool in_hoa) { is_hourlyorannual = in_hoa; }
 	void printEntry() {
 		if (!is_hourlyorannual) {
-			cout << lastname << "," << firstname << ":" << "" << compensation << "\n" << endl;
+			cout << lastname << "," << firstname << " $ Annual Compensation :" << "" << compensation << "\n" << endl;
 			cout << firstname << ":" << endl;
 			cout << compensation << endl;
 		}
 		else {
-			cout << lastname << "," << firstname << ":" << "$" << compensation << "\n" << endl;
+			cout << lastname << "," << firstname << "$ Annual Compensation :" << compensation << "\n" << endl;
 		}
 	}
 };
@@ -68,9 +68,9 @@ int main()
 			if (strcmp(value, "true")==0) {
 				cout << "you are a hourly employee . Please enter in your compenstation in a hourly rate (example $/hr):" << endl;
 				cin.getline(value, 255);
-				i = atoi(value);
-				int annual = i * 2000;
-				value = _itoa(annual,value,10);
+				i = atoi(value);  // coverts char to int i
+				int annual = i * 2000; // int i by 2000 to find out annual compenstation
+				value = _itoa(annual,value,10); // converts  int back to char 
 				entries[x].set_compensation(value);
 			}
 			else if(strcmp(value, "false")==0){
