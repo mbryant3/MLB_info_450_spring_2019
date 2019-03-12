@@ -20,6 +20,7 @@
 #include <iostream>
 #include <string.h>
 #include <cstdio>
+#include <stdlib.h>
 
 using namespace std;
 class Employee {
@@ -29,6 +30,7 @@ private:
 	char type[20];
 	bool is_hourlyorannual;
 	char compensation[255];
+   
 public:
 	void set_firstname(const char* in_name) { strcpy(firstname, in_name); }
 	void set_lastname(const char* in_lname) { strcpy(lastname, in_lname); }
@@ -49,10 +51,12 @@ public:
 int main()
 {
 	const int MAX = 3;
+	int i;
 	Employee entries[MAX];
 	for (int x=0; x < MAX; x++) {
 		cout << "Entry: " << x << endl;
 		char *value = (char *)malloc(255);
+		(int *)malloc(30 * sizeof(int));
 		cout << "enter employees first name:" << endl;
 		cin.getline(value, 255);
 		entries[x].set_firstname(value);
@@ -64,6 +68,9 @@ int main()
 			if (strcmp(value, "true")==0) {
 				cout << "you are a hourly employee . Please enter in your compenstation in a hourly rate (example $/hr):" << endl;
 				cin.getline(value, 255);
+				i = atoi(value);
+				int annual = i * 2000;
+				value = _itoa(annual,value,10);
 				entries[x].set_compensation(value);
 			}
 			else if(strcmp(value, "false")==0){
