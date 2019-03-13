@@ -13,6 +13,7 @@
         Output, print out in this format:
         'Last Name', 'First Name': $'Annual Compensation'\n
         There are 2,000 work hours in a year
+		i used crt_secure_no warning in preprocessors defintions to use strcpy
  */
 
 
@@ -21,7 +22,7 @@
 #include <string.h>
 #include <cstdio>
 #include <stdlib.h>
-
+#pragma warning(disable : 4996)
 using namespace std;
 class Employee {
 private:
@@ -32,19 +33,19 @@ private:
 	char compensation[255];
    
 public:
-	void set_firstname(const char* in_name) { strcpy(firstname, in_name); }
+	void set_firstname(const char* in_fname) { strcpy(firstname, in_fname); }
 	void set_lastname(const char* in_lname) { strcpy(lastname, in_lname); }
 	void set_type(const char* in_type) { strcpy(type, in_type); }
 	void set_compensation(const char* in_comp) { strcpy(compensation, in_comp); }
 	void set_is_hourlyorannual(bool in_hoa) { is_hourlyorannual = in_hoa; }
 	void printEntry() {
 		if (!is_hourlyorannual) {
-			cout << lastname << "," << firstname << " $ Annual Compensation :" << "" << compensation << "\n" << endl;
+			cout << lastname << "," << firstname << " "<< " $ Annual Compensation :" << "" << compensation << "\n" << endl;
 			cout << firstname << ":" << endl;
 			cout << compensation << endl;
 		}
 		else {
-			cout << lastname << "," << firstname << "$ Annual Compensation :" << compensation << "\n" << endl;
+			cout << lastname << "," << firstname << " "<< "$ Annual Compensation :" << compensation << "\n" << endl;
 		}
 	}
 };
