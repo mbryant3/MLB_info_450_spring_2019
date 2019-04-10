@@ -117,3 +117,44 @@ int main()
 
 }
 
+/*int main()
+{
+
+	char entry = 'Y' ;
+	Car*head = new Car(" " ,0 , 0 , 0 , " ");
+	while(entry =='Y'|| 'y'){
+	    char vehicle [50];
+		cout << "IS this an automobile or a truck? Enter 'automobile' or 'truck'";
+		cin.getline(vehicle, 50);
+		if (strcmp(vehicle, "automobile") )
+		{
+			cout << "How many wheels does this vehicle have ?";
+			int wheels;
+			cin >> wheels;
+			cout << "How many passengers can this vehicle hold?";
+			int passengers;
+			cin >> passengers;
+			cout << "What type of automobile is this ? Please enter in van , car , wagon";
+			string type;
+			cin >> type;
+			
+		}
+		if (strcmp(vehicle, "truck") )
+		{
+			cout << "How many wheels does this vehicle have ?";
+			int wheels;
+			cin >> wheels;
+			cout << "How many passengers can this vehicle hold?";
+			int passengers;
+			cin >> passengers;
+			cout << "How much cargo (in pounds) can this vehicle hold?";
+			int cargo;
+			cin >> cargo;
+		}
+		else {
+			cout << "you entered invalid answer please enter in truck or automobile";
+		}
+		cout << "Would you like to enter another vehicle? Please enter in yes or no";
+		cin >> entry;
+		return 0;
+	}*/
