@@ -74,13 +74,14 @@ void Car::Print() {
 int main()
 {
 
-	char entry= 'Y' ;
+	char entry ;
 	Car*head = new Car(" " ,0 , 0 , 0 , " ");
-	while(entry == 'Y'){
-		char vehicle[50];
+	while(true){
+		string car;
 		cout << "IS this an automobile or a truck? Enter 'automobile' or 'truck'";
-		cin.getline(vehicle, 50);
-		if (vehicle != "truck")
+		getline(cin,car);
+		cout << car
+		if (car != "truck")
 		{
 			cout << "How many wheels does this vehicle have ?";
 			int wheels;
@@ -93,9 +94,14 @@ int main()
 			cin >> type;
 			cout << "Would you like to enter another vehicle? Please enter in yes or no";
 			cin >> entry;
-			
+			if (entry == 'y') {
+				return true
+			}
+			else if (entry = 'n') {
+				return false
+			}
 		}
-		if (vehicle !="automobile") 
+		if (car !="automobile") 
 		{
 			cout << "How many wheels does this vehicle have ?";
 			int wheels;
@@ -108,12 +114,13 @@ int main()
 			cin >> cargo;
 			cout << "Would you like to enter another vehicle? Please enter in yes or no";
 			cin >> entry;
+			if(entry== 'y'){
+				return true	
+			}
+			else if (entry = 'n') {
+				return false
+			}
 		}
-		else {
-			cout << "you entered invalid answer please enter in truck or automobile";
-		}
-		//cout << "Would you like to enter another vehicle? Please enter in yes or no";
-		//cin >> entry;
 		head->Print();
 		return 0;
 	}
