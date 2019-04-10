@@ -20,7 +20,7 @@ private:
 	Car*next;
 public:
 	//void sample(string AutoorTruck, int wheels, int passengers, char type);
-	void insert(string AutoorTruck, int wheels, int passengers, int cargo, string type);
+	void input(string AutoorTruck, int wheels, int passengers, int cargo, string type);
 	Car(string autoortruck, int tires , int riders ,int storage , string variant);
 	void Print();
 };
@@ -33,8 +33,8 @@ Car::Car(string autoortruck, int tires, int  riders, int storage, string variant
 	next = NULL;
 
 }
-void Car::insert(string AutoorTruck, int wheels, int passengers, int cargo, string type) {
-	if (next == NULL) {
+void Car::input(string AutoorTruck, int wheels, int passengers, int cargo, string type) {
+	if (next != NULL) {
 		next->insert(AutoorTruck, wheels, passengers, cargo, type);
 	}
 	else {
@@ -42,30 +42,30 @@ void Car::insert(string AutoorTruck, int wheels, int passengers, int cargo, stri
 	}
 }
 void Car::Print() {
-	ofstream out;
-	out.open("output.txt");
-		if (out.is_open()) {
+	ofstream output;
+	output.open("output.txt");
+		if (output.is_open()) {
 			Car*placeholder = next;
 			while (placeholder != NULL)
 			{
 				cout << "Vehicle:" << placeholder->AutoorTruck << "\n" << endl;
-				out << placeholder->AutoorTruck + "\n";
+				output << placeholder->AutoorTruck + "\n";
 				cout << "Wheels:" << placeholder->wheels << "\n" << endl;
-				out << placeholder->wheels + "\n";
+				output << placeholder->wheels + "\n";
 				cout << "Passengers:" << placeholder->passengers << "\n" << endl;
-				out << placeholder->passengers + "\n";
+				output << placeholder->passengers + "\n";
 				if (placeholder->AutoorTruck =="Automobile" ) {
 					cout << "type:" << placeholder->type << "\n" << endl;
-					out << placeholder->type + "\n";
+					outout << placeholder->type + "\n";
 
 				}
 				else {
 					cout << "Cargo:" << placeholder->cargo << "\n" << endl;
-					out << placeholder->cargo + "\n";
+					output << placeholder->cargo + "\n";
 				}
 				placeholder = placeholder->next;
 			}
-			out.close();
+			output.close();
 	}
 		else {
 			cout << "your file did not open , please try to fix your problem." << endl;
@@ -77,10 +77,11 @@ int main()
 	char entry[]= "yes" ;
 	Car*head = new Car(" " ,0 , 0 , 0 , " ");
 	while(entry[0] == 'yes'){
-		char input[50];
+		string vehicle[50];
 		cout << "IS this an automobile or a truck? Enter 'automobile' or 'truck'";
-		cin >> input;
-		if ( input == "automobile"){
+		cin.getline(vehicle, 50);
+		if (strcmp(vehicle, "automobile") 
+		{
 			cout << "How many wheels does this vehicle have ?";
 			int wheels;
 			cin >> wheels;
@@ -92,7 +93,7 @@ int main()
 			cin >> type;
 			
 		}
-		if (input == "truck")
+		if (strcmp(vehicle, "truck") 
 		{
 			cout << "How many wheels does this vehicle have ?";
 			int wheels;
@@ -109,8 +110,10 @@ int main()
 		}
 		cout << "Would you like to enter another vehicle? Please enter in yes or no";
 		cin >> entry;
+		return 0;
 	}
 	head->Print();
+	
 
 }
 
