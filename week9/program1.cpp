@@ -8,7 +8,7 @@
 #include <cstdio>
 #include <stdlib.h>
 #include <fstream>
-#pragma warning(disable : 4996)
+
 using namespace std;
 class Car {
 private:
