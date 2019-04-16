@@ -1,0 +1,8 @@
+truck
+4
+4
+400000
+autombile
+4
+4
+0
