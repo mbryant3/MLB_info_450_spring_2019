@@ -55,7 +55,7 @@ void Car::Print() {
 				cout << "Wheels:" << placeholder->wheels << "\n" << endl;
 				output << placeholder->wheels ;
 				output << "\n";
-				cout << "Passengers:" << placeholder->passengers << "\n" << endl;
+				cout << "Passengers:" << placeholder->passengers <<"\n" << endl;
 				output << placeholder->passengers ;
 				output << "\n";
 				if (placeholder->car =="automobile" ) {
@@ -64,7 +64,7 @@ void Car::Print() {
 					output << "\n";
 				}
 				else {
-					cout << "Cargo:" << placeholder->cargo << "\n" << endl;
+					cout << "Cargo:" << placeholder->cargo << "lb" <<"\n" << endl;
 					output << placeholder->cargo ;
 					output << "\n";
 				}
