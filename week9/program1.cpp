@@ -20,7 +20,6 @@ private:
 	string car;
 	Car*next;
 public:
-	//void sample(string AutoorTruck, int wheels, int passengers, char type);
 	void input(string car, int wheels, int passengers, int cargo, string type);
 	Car(string motor, int tires, int riders, int storage, string variant);
 	void Print();
@@ -30,30 +29,11 @@ Car::Car(string motor, int tires, int  riders, int storage, string variant) {
 	passengers = riders;
 	type = variant;
 	cargo = storage;
-	//AutoorTruck = autoortruck;
 	car = motor;
 	next = NULL;
 
 }
-/*class Truck :public Car {
-public:
-	int getCargo() {
-		int cargo;
-		cin >> cargo;
-		cout << "Would you like to enter another vehicle? Please enter in yes or no";
-		return cargo;
-	}
-};*/
-/*class Automobile : public Car {
-public:
-	int getType() {
-		cout << "What type of automobile is this ? Please enter in van , car , wagon";
-		string type;
-		cin >> type;
-		return type;
-	}
 
-};*/
 void Car::input(string car, int wheels, int passengers, int cargo, string type) {
 	if (next != NULL) {
 		next->input(car, wheels, passengers, cargo, type);
@@ -98,16 +78,12 @@ void Car::Print() {
 }
 int main()
 {
-	cout << "test" << endl;
-	bool cont = true;
 	char retry []="yes"  ;
 	Car*head = new Car(" ", 0, 0, 0, " ");
 	while (retry[0] == 'y' && retry[1] == 'e' && retry[2] == 's') {
-		//cout << "test" << endl;
 		string car;
 		cout << "IS this an automobile or a truck? Enter 'automobile' or 'truck'";
 		getline(cin, car);
-		cout << car;
 			if ((car.compare("autombile"))==0)
 			{
 				cout << "How many wheels does this vehicle have ?";
