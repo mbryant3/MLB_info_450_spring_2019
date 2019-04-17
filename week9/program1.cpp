@@ -1,5 +1,7 @@
 // week9Program1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/*if you see test in beginning then and put in my cpp file is still bugged , 
+for some reason this file only looking at my old changes. if want to test it then enter in autombile instead of automobile if bugged
+please copy into new file or run online complier to test if u see test at the beginning*/
 
 #include "pch.h"
 #include <iostream>
