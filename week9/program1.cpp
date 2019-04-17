@@ -84,7 +84,7 @@ int main()
 		string car;
 		cout << "IS this an automobile or a truck? Enter 'automobile' or 'truck'";
 		getline(cin, car);
-			if ((car.compare("autombile"))==0)
+			if ((car.compare("automobile"))==0)
 			{
 				cout << "How many wheels does this vehicle have ?";
 				int wheels;
